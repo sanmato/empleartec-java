@@ -26,8 +26,9 @@ public class BankAccount {
         return 0;
     }
     
-    public double deposite(){
-        return 0;
+    public double deposite(double deposit){
+        balance+=deposit;
+        return balance;
     }
     
     
