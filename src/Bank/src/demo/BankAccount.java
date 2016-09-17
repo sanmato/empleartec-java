@@ -22,8 +22,9 @@ public class BankAccount {
         
     }
     
-    public double extract(){
-        return 0;
+    public double extract(double extraction){
+        balance-=extraction;
+        return balance;
     }
     
     public double deposite(double deposit){
