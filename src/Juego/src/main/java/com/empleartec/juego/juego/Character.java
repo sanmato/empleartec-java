@@ -18,6 +18,10 @@ public abstract class Character {
         this.religion = religion;
         this.alignment = alignment;
         this.age = age;
+        this.stats.put("Strength", 0);
+        this.stats.put("Agility", 0);
+        this.stats.put("Stamina", 0);
+        this.stats.put("Intellect", 0);
         
     }
 
@@ -120,17 +124,11 @@ public abstract class Character {
    
     //REVISAR
     void attack(Character fighterB){
-        System.out.println("Health of character"+name+"Is reduced by"+damage+"points");
-        System.out.println("Health remaining: "+(health - damage));
+        System.out.println("Health of character"+fighterB.name+"Is reduced by"+totalDamage()+"points");
+        fighterB.setHealth((fighterB.health - totalDamage()));
+        System.out.println("Health remaining: "+fighterB.getHealth());
         
         
-    }
-    
-    void stats(){
-        stats.put("Strength", 0);
-        stats.put("Agility", 0);
-        stats.put("Stamina", 0);
-        stats.put("Intellect", 0);
     }
     
     public void asignStats(){
