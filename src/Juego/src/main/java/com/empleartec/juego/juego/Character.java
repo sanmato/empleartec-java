@@ -6,8 +6,8 @@ import java.util.Map;
 
 
 public abstract class Character {
-    String name, nickname, religion, alignment;
-    int level=1, nightvision=500, age, health=100, damage;
+   private String name, nickname, religion, alignment;
+   private int level=1, nightvision=500, age, health=100, damage;
   
     
     Map <String, Integer> stats = new HashMap <>();
@@ -124,7 +124,7 @@ public abstract class Character {
    
     //REVISAR
     void attack(Character fighterB){
-        System.out.println("Health of character"+fighterB.name+"Is reduced by"+totalDamage()+"points");
+        System.out.println("Health of character"+ " " +fighterB.name+" is reduced by"+ " " +totalDamage()+ " "+ "points");
         fighterB.setHealth((fighterB.health - totalDamage()));
         System.out.println("Health remaining: "+fighterB.getHealth());
         
