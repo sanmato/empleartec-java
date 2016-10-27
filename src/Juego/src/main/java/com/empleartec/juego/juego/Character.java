@@ -106,7 +106,7 @@ public abstract class Character {
         this.stats = stats;
     }
     
-    abstract void run();
+    abstract void phrase();
     
     void walk(){
         

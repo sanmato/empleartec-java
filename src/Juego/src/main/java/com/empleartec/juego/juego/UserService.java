@@ -7,6 +7,7 @@ import java.util.List;
 
 public class UserService {
     List <User> users = new ArrayList<>();
+    List <Character> characters = new ArrayList<>();
     
     public void register(String username, String password){
         if(username !=null && password != null){
@@ -43,5 +44,11 @@ public class UserService {
         else{
             return false;
         }
+    }
+    
+    public void createCharacter(String name, String nickname, String religion, String alignment, int age){
+     Character c = new Hero(name, nickname, religion, alignment, age);
+     
+     characters.add(c);
     }
 }

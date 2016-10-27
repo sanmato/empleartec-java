@@ -9,8 +9,8 @@ public class Hero extends Character{
     }
 
     @Override
-    void run() {
-    
+    void phrase() {
+        System.out.println("In the name of justice, i'll stop you!");
     }
     
     

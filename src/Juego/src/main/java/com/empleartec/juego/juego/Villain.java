@@ -9,8 +9,8 @@ public class Villain extends Character{
     }
 
     @Override
-    void run() {
-       
+    void phrase() {
+        System.out.println("I'll destroy you!");
     }
     
 }
