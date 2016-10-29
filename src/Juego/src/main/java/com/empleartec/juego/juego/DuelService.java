@@ -1,7 +1,28 @@
+/*
+ *Globant, Java Inicial
+ *
+ *File: DuelService.java
+ *
+ *Project: Game
+ *
+ *Author: Miguel, Jessica.
+ *        Dubois, Christian.
+ *        Mato, Santiago.
+ *
+ *
+ *
+ */
 
 package com.empleartec.juego.juego;
 
-
+/**
+ *This class is a Duel class Service
+ * 
+ * @author miguel.jessica
+ *         dubois.christian
+ *         mato.santiago
+ * 
+ */
 public class DuelService {
     
     //Combat Method

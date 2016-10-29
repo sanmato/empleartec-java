@@ -1,17 +1,42 @@
+/*
+ *Globant, Java Inicial
+ *
+ *File: Character.java
+ *
+ *Project: Game
+ *
+ *Author: Miguel, Jessica.
+ *        Dubois, Christian.
+ *        Mato, Santiago.
+ *
+ *
+ *
+ */
 
 package com.empleartec.juego.juego;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ *Character abstract class, contains attributes and methods of a simple character in a game.
+ *Superclass
+ * 
+ * @author miguel.jessica
+ *         dubois.christian
+ *         mato.santiago
+ * 
+ */
 
 public abstract class Character {
+    //Character Attributes.
    private String name, nickname, religion, alignment;
    private int level=1, nightvision=500, age, health=100, damage;
   
-    
+    //Stat HashMap.
     Map <String, Integer> stats = new HashMap <>();
 
+    //Class Constructor.
     public Character(String name, String nickname, String religion, String alignment, int age) {
         this.name = name;
         this.nickname = nickname;
@@ -25,6 +50,7 @@ public abstract class Character {
         
     }
 
+    //Getters and Setters.
     public String getName() {
         return name;
     }
@@ -106,30 +132,39 @@ public abstract class Character {
         this.stats = stats;
     }
     
-    abstract void phrase();
-    
-    void walk(){
-        
-    }
-    
-    void stop(){
-        
-    }
-    //REVISAR
-    int totalDamage(){
+    //Abstract Method.
+    public abstract void phrase();
+ 
+    /**
+     * This method calculate the damage of a character
+     *
+     * @return 1 + the Strength of the character
+     */
+    public int totalDamage(){
        damage = 1+(stats.get("Strength"));
         
         return damage;
     }
    
-    //REVISAR
-    void attack(Character fighterB){
+    /**
+     *fighterA (character) attacks fighterB
+     *The damage value calculated in totalDamage method will be subtracted from the amount of health.
+     * 
+     * @param fighterB receives the attack
+     * 
+     */
+    public void attack(Character fighterB){
         System.out.println("Health of character"+ " " +fighterB.name+" is reduced by"+ " " +totalDamage()+ " "+ "points");
         fighterB.setHealth((fighterB.health - totalDamage()));
         System.out.println("Health remaining: "+fighterB.getHealth());
         
         
     }
+    
+    /**
+     *Assigns a value for each stat in the Stat HashMap
+     *the methods to assign stats belongs to StatDice class and return a random number from 1 to 21.
+     */
     
     public void asignStats(){
         stats.put("Strength", StatDice.rollStrength());

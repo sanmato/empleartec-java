@@ -1,9 +1,19 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *Globant, Java Inicial
+ *
+ *File: App.java (Main)
+ *
+ *Project: Game
+ *
+ *Author: Miguel, Jessica.
+ *        Dubois, Christian.
+ *        Mato, Santiago.
+ *
+ *
+ *
  */
 
+import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -15,9 +25,9 @@ import static org.junit.Assert.*;
  *
  * @author Administrador
  */
-public class JuegoTest {
+public class GameTest extends TestCase {
     
-    public JuegoTest() {
+    public GameTest() {
     }
     
     @BeforeClass
@@ -41,4 +51,12 @@ public class JuegoTest {
     //
     // @Test
     // public void hello() {}
+    
+    
+    
+    @Test
+    public void TestVillain(){
+        
+    }
+    
 }
