@@ -16,7 +16,7 @@
 package com.empleartec.juego.juego;
 
 /**
- *Villain is a type of character (child of abstract class Character)
+ *Villain is a typpe of character (child of abstract class Character)
  * 
  * @author miguel.jessica
  *         dubois.christian
